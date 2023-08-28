@@ -1,9 +1,17 @@
 import Counter from './components/Counter';
-
-
-function App() {
+import Header from './components/Header';
+import Auth from './components/Auth';
+import UserProfile from './components/UserProfile'
+import { useSelector } from 'react-redux';
+const App=()=> {
+  const login= useSelector(state=> state.auth.isAuthenticated);
   return (
+    <>
+    <Header/>
+    {!login &&<Auth/>}
+    {login && <UserProfile/>}
     <Counter />
+    </>
   );
 }
 
