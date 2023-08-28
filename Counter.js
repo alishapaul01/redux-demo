@@ -5,22 +5,22 @@ const Counter = () => {
   const counter= useSelector(state=> state.counter);
 
   const incrementHandler=()=>{
-    dispatch({type: 'increment'})
+    dispatch({type: 'increase', amount: 1})
   }
   const decrementhandler=()=>{
-    dispatch({type: 'decrement'})
+    dispatch({type: 'decrease', amount: 1})
   }
   const incrementby2Handler=()=>{
-    dispatch({type: 'incrementby2'})
+    dispatch({type: 'increase' , amount: 2})
   }
   const decrementby2handler=()=>{
-    dispatch({type: 'decrementby2'})
+    dispatch({type: 'decrease', amount: 2})
   }
   const incrementby5Handler=()=>{
-    dispatch({type: 'incrementby5'})
+    dispatch({type: 'increase' , amount: 5})
   }
   const decrementby5handler=()=>{
-    dispatch({type: 'decrementby5'})
+    dispatch({type: 'decrease', amount: 5})
   }
   const toggleCounterHandler = () => {};
 
